@@ -43,7 +43,7 @@ export default function SettingsPanel({ state, onUpdateDisplay, onUpdateZ0, onUp
             className="smith-input w-24"
             type="number"
             value={state.Z0}
-            onChange={e => onUpdateZ0(parseFloat(e.target.value) || 50)}
+            onChange={e => onUpdateZ0(parseFloat(e.target.value) || 1)}
           />
           <span className="text-muted-foreground">Ω</span>
         </div>

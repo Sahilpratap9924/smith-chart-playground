@@ -67,7 +67,7 @@ export function createDefaultState(): SmithState {
     points: [],
     activePointId: null,
     chartMode: 'Z',
-    Z0: 50,
+    Z0: 1,
     frequency: null,
     frequencyUnit: 'GHz',
     display: {
