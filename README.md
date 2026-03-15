@@ -1,10 +1,10 @@
-# Smith Spark
+# Smith-chart-playground
 
 An interactive **Smith Chart** web app built with **React + Vite + TypeScript**.
 
 ## 🚀 What is this?
 
-Smith Spark lets you explore impedance/admittance transformations using a classic Smith chart visualization.
+Smith-chart-playground lets you explore impedance/admittance transformations using a classic Smith chart visualization.
 
 ### ✅ Features
 
