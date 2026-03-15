@@ -1,73 +1,62 @@
-# Welcome to your Lovable project
+# Smith Spark
 
-## Project info
+An interactive **Smith Chart** web app built with **React + Vite + TypeScript**.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+## 🚀 What is this?
 
-## How can I edit this code?
+Smith Spark lets you explore impedance/admittance transformations using a classic Smith chart visualization.
 
-There are several ways of editing your application.
+### ✅ Features
 
-**Use Lovable**
+- Interactive Smith chart plotting (click to plot points)
+- Impedance / admittance mode toggle (Z / Y / ZY)
+- Point list with rename/delete
+- Solution log tracking all steps and moves
+- Undo/redo history navigation
+- Export the chart as a PNG image
+- Light/dark theme support
+- Responsive layout with keyboard shortcuts
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+## 🧭 How to Use
 
-Changes made via Lovable will be committed automatically to this repo.
+1. Run the app locally (see below).
+2. Click anywhere on the Smith chart to plot a point.
+3. Use the **Input** panel to enter known values and navigate along transmission lines.
+4. Switch between **Impedance**, **Admittance**, and **Combined** modes.
+5. Track plotted points in the **Points** tab and review the **Solution Log**.
+6. Export the current chart as a PNG from the **Settings** tab.
 
-**Use your preferred IDE**
+## 🛠️ Local Development
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+```bash
+npm install
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+Then open the URL shown in your terminal (usually `http://localhost:5173`).
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## ✅ Available Scripts
 
-**Use GitHub Codespaces**
+| Command              | Description                          |
+| -------------------- | ------------------------------------ |
+| `npm run dev`        | Starts the dev server (Vite)         |
+| `npm run build`      | Builds the production bundle         |
+| `npm run build:dev`  | Builds with `development` mode       |
+| `npm run preview`    | Preview the production build locally |
+| `npm run lint`       | Run ESLint checks                    |
+| `npm run test`       | Run unit tests (Vitest)              |
+| `npm run test:watch` | Run tests in watch mode              |
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## 🧩 Project Structure
 
-## What technologies are used for this project?
+- `src/` – Main source code
+  - `pages/` – App pages (root page + 404)
+  - `components/` – Reusable UI components (chart, panels, layout)
+  - `smith/` – Smith-chart math, state management, and rendering logic
+  - `hooks/` – Custom React hooks
+  - `lib/` – Utility functions
 
-This project is built with:
+## 🧠 Notes
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+- The core Smith-chart math lives in `src/smith/math.ts`.
+- State history (undo/redo) is implemented via `StateHistory` in `src/smith/state.ts`.
